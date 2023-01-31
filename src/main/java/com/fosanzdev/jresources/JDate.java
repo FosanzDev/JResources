@@ -26,7 +26,7 @@ public class JDate {
                 //Requests the date
                 res = JRequest.requestString(msj);
                 //Creates the pattern from the format
-                String pat = readDate(format, "/");
+                String pat = dateToPattern(format, "/");
                 //Compile and compare with the date
                 Pattern pattern = Pattern.compile(pat);
                 Matcher m = pattern.matcher(res);
