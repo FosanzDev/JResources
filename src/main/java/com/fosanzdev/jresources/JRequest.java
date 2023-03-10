@@ -117,6 +117,38 @@ public class JRequest {
     }
 
     /**
+     * Reads an integer with a personalized message and a range of values
+     *
+     * @param msj String with the message
+     * @param min Minimum value
+     * @param max Maximum value
+     * @return Validated integer
+     */
+    public static int requestInt(String msj, int min, int max) {
+        int res = 0;
+        boolean valid;
+
+        do {
+            System.out.print(msj);
+            valid = true;
+            try {
+                res = scanner.nextInt();
+                scanner.nextLine();
+                if (res < min || res > max) {
+                    System.out.println("Invalid Entry");
+                    valid = false;
+                }
+            } catch (InputMismatchException e) {
+                scanner.nextLine();
+                System.out.println("Invalid Entry");
+                valid = false;
+            }
+        } while (!valid);
+
+        return res;
+    }
+
+    /**
      * Reads and validates a double
      *
      * @param msj String to be printed
