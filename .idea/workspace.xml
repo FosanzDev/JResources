@@ -8,7 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="reverseArray now reverses all type of objects">
+    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="improved dateToPattern: now it can work with multiple separators and default separators">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDate.java" afterDir="false" />
     </list>
@@ -78,7 +78,7 @@
       <workItem from="1674846900170" duration="382000" />
       <workItem from="1675080335430" duration="239000" />
       <workItem from="1675159537066" duration="1272000" />
-      <workItem from="1678435826575" duration="2074000" />
+      <workItem from="1678435826575" duration="2434000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674821654081</created>
@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678437550702</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="improved dateToPattern: now it can work with multiple separators and default separators">
+      <created>1678438011038</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678438011038</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +141,7 @@
     <MESSAGE value="Created requestInt with limited range" />
     <MESSAGE value="sumArray and divArray are now double arrays" />
     <MESSAGE value="reverseArray now reverses all type of objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="reverseArray now reverses all type of objects" />
+    <MESSAGE value="improved dateToPattern: now it can work with multiple separators and default separators" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved dateToPattern: now it can work with multiple separators and default separators" />
   </component>
 </project>

@@ -63,15 +63,15 @@ public class JDate {
 
     /**
      * Transforms a date format to a regular expression
-     * The separator used is the char given in defaultSeparator
+     * The separator used is the String given in defaultSeparator
      *
      * @param date      String with the date format
-     * @param separators char array with the separators
-     * @param defaultSeparator char with the default separator
+     * @param separators String array with the separators
+     * @param defaultSeparator String with the default separator
      * @return String with the regular expression
      */
-    public static String dateToPattern(String date, char[] separators, char defaultSeparator) {
-        String[] dateParts = date.split("[" + new String(separators) + "]");
+    public static String dateToPattern(String date, String[] separators, String defaultSeparator) {
+        String[] dateParts = date.split(String.join("|", separators));
         return String.format("\\d{%d}%s\\d{%d}%s\\d{%d}", dateParts[0].length(), defaultSeparator, dateParts[1].length(), defaultSeparator, dateParts[2].length());
     }
 
@@ -80,22 +80,22 @@ public class JDate {
      * The default separator is /
      *
      * @param date String with the date format
-     * @param separators char array with the separators
+     * @param separators String array with the separators
      * @return String with the regular expression
      */
-    public static String dateToPattern(String date, char[] separators) {
-        return dateToPattern(date, separators, '/');
+    public static String dateToPattern(String date, String[] separators) {
+        return dateToPattern(date, separators, "/");
     }
 
     /**
      * Transforms a date format to a regular expression
-     * The default separators are '/', '-', '.'
+     * The default separators are "/", "-", "."
      *
      * @param date String with the date format
      * @return String with the regular expression
      */
     public static String dateToPattern(String date){
-        return dateToPattern(date, new char[]{'/', '-', '.'}, '/');
+        return dateToPattern(date, new String[]{"/", "-", "."}, "/");
     }
 
 }
