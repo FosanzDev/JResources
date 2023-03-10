@@ -8,8 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="sumArray and divArray are now double arrays">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JArray.java" afterDir="false" />
+    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="reverseArray now reverses all type of objects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <workItem from="1674846900170" duration="382000" />
       <workItem from="1675080335430" duration="239000" />
       <workItem from="1675159537066" duration="1272000" />
-      <workItem from="1678435826575" duration="1686000" />
+      <workItem from="1678435826575" duration="2074000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674821654081</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678437387783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="reverseArray now reverses all type of objects">
+      <created>1678437550702</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678437550702</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +133,7 @@
     <MESSAGE value="Fixed Standard readDate format" />
     <MESSAGE value="Created requestInt with limited range" />
     <MESSAGE value="sumArray and divArray are now double arrays" />
-    <option name="LAST_COMMIT_MESSAGE" value="sumArray and divArray are now double arrays" />
+    <MESSAGE value="reverseArray now reverses all type of objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="reverseArray now reverses all type of objects" />
   </component>
 </project>
