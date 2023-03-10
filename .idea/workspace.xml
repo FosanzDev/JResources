@@ -8,7 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="changed functionality in dateToPattern&#10;&#10;now dateToPattern is capable of work with separators with more than one character (Strings).">
+    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JMenuGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDeploy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDeploy.java" afterDir="false" />
     </list>
@@ -78,7 +79,7 @@
       <workItem from="1674846900170" duration="382000" />
       <workItem from="1675080335430" duration="239000" />
       <workItem from="1675159537066" duration="1272000" />
-      <workItem from="1678435826575" duration="3870000" />
+      <workItem from="1678435826575" duration="6914000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674821654081</created>
@@ -136,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678438379809</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not">
+      <created>1678442585172</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678442585172</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +158,7 @@
     <MESSAGE value="reverseArray now reverses all type of objects" />
     <MESSAGE value="improved dateToPattern: now it can work with multiple separators and default separators" />
     <MESSAGE value="changed functionality in dateToPattern&#10;&#10;now dateToPattern is capable of work with separators with more than one character (Strings)." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed functionality in dateToPattern&#10;&#10;now dateToPattern is capable of work with separators with more than one character (Strings)." />
+    <MESSAGE value="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not" />
   </component>
 </project>

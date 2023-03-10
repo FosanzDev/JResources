@@ -58,7 +58,12 @@ public class JDeploy {
 
         if (footer) {
             System.out.println("-".repeat(title.length() + 6));
-            System.out.println(args[args.length - 1]);
+
+            if (init.contains("."))
+                System.out.println(init.replace(".", "0.") + args[args.length - 1]);
+
+            else
+                System.out.println(init + args[args.length - 1]);
         } else {
             System.out.println(args[args.length - 1]);
         }
