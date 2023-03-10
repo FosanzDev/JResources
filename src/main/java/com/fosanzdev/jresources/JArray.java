@@ -140,8 +140,8 @@ public class JArray {
      * @param arr array to reverse
      * @return reversed array
      */
-    public static int[] reverseArray(int[] arr) {
-        int[] res = new int[arr.length];
+    public static Object[] reverseArray(Object[] arr) {
+        Object[] res = new Object[arr.length];
 
         for (int i = arr.length - 1; i > 0; i--) {
             res[arr.length - 1 - i] = arr[i];
