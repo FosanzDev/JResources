@@ -67,9 +67,9 @@ public class JArray {
      * @param a2 integer array two
      * @return integer array with the result of the additions
      */
-    public static int[] sumArray(int[] a1, int[] a2) {
+    public static double[] sumArray(double[] a1, double[] a2) {
         int len = Math.min(a1.length, a2.length);
-        int[] res = new int[len];
+        double[] res = new double[len];
 
         for (int i = 0; i < len; i++)
             res[i] = a1[i] + a2[i];
@@ -88,12 +88,12 @@ public class JArray {
      * @param a2 integer array with the divisors
      * @return double array with the result of the divisions
      */
-    public static double[] divArray(int[] a1, int[] a2) {
+    public static double[] divArray(double[] a1, double[] a2) {
         int len = Math.min(a1.length, a2.length);
         double[] res = new double[len];
 
         for (int i = 0; i < len; i++)
-            res[i] = (double) a1[i] / a2[i];
+            res[i] = a1[i] / a2[i];
 
         return res;
 

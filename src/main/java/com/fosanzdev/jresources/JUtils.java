@@ -77,6 +77,4 @@ public class JUtils {
         return x >= lowerBound && x <= upperBound;
     }
 
-
-
 }

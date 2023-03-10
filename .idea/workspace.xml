@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Production Files" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="Fixed Standard readDate format">
+    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="Created requestInt with limited range">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,21 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/fosan/OneDrive/Escritorio/FP/Programación_Extras/JResources/src/main/java/com/fosanzdev/jresources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/fosan/OneDrive/Escritorio/FP/Programación_Extras/JResources/src/main/java/com/fosanzdev/jresources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fosan\OneDrive\Escritorio\FP\Programación_Extras\JResources\src\main\java\com\fosanzdev\jresources" />
@@ -73,7 +80,7 @@
       <workItem from="1674846900170" duration="382000" />
       <workItem from="1675080335430" duration="239000" />
       <workItem from="1675159537066" duration="1272000" />
-      <workItem from="1678435826575" duration="239000" />
+      <workItem from="1678435826575" duration="1532000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674821654081</created>
@@ -96,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675163848190</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created requestInt with limited range">
+      <created>1678436108340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678436108340</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Fixed Standard readDate format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Standard readDate format" />
+    <MESSAGE value="Created requestInt with limited range" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created requestInt with limited range" />
   </component>
 </project>
