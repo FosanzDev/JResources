@@ -17,9 +17,16 @@ package com.fosanzdev.jresources;
 public class JMenuGenerator {
 
     public String init = "- ";
-    public boolean autoIndex = false;
+    public boolean autoIndex = true;
     public boolean footer = true;
-    public boolean indexFooter = false;
+    public boolean indexFooter = true;
+
+    public JMenuGenerator(String init, boolean autoIndex, boolean footer, boolean indexFooter) {
+        this.init = init;
+        this.autoIndex = autoIndex;
+        this.footer = footer;
+        this.indexFooter = indexFooter;
+    }
 
     public String generateMenu(String title, String... args) {
         StringBuilder menu = new StringBuilder();
