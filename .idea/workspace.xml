@@ -9,9 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JMenuGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDeploy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDeploy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JMenuGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JMenuGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/fosan/OneDrive/Escritorio/FP/Programación_Extras/JResources/src/main/java/com/fosanzdev/jresources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
