@@ -9,19 +9,24 @@ public class JRequest {
 
     /**
      * Request the user a String with a personalized request message
-     * and loops input request in case length of the String given is not between {@code [minLon-maxLon]}
+     * and loops input request in case length of the String given is not between
+     * {@code [minLon-maxLon]}
      * <p>
      * Examples:
-     * <blockquote><pre>
+     * <blockquote>
+     * 
+     * <pre>
      *
      * String string = leerString("Enter an String: ", 0, 20);
      *
-     * </pre></blockquote>
+     * </pre>
+     * 
+     * </blockquote>
      * <p>
      *
      * @param message String with the personalized message
-     * @param minLon Integer with the minimum length
-     * @param maxLon Integer with the maximum length
+     * @param minLon  Integer with the minimum length
+     * @param maxLon  Integer with the maximum length
      * @return String with the validated input
      */
     public static String requestString(String message, int minLon, int maxLon) {
@@ -40,14 +45,14 @@ public class JRequest {
 
     /**
      * Reads a String with a personalized request message
+     * 
      * @param message Message to be printed
      * @return String with the input
      */
-    public static String requestString(String message){
+    public static String requestString(String message) {
         System.out.print(message);
         return scanner.nextLine();
     }
-
 
     /**
      * Reads and returns a true/false user statement
@@ -175,6 +180,56 @@ public class JRequest {
         } while (!valid);
 
         return d;
+    }
+
+    /**
+     * Reads a boolean with a personalized message
+     *
+     * @param msj String with the message
+     * @return Validated boolean
+     */
+    public static boolean requestBoolean(String msj) {
+        boolean res = false;
+        boolean valid;
+
+        do {
+            System.out.print(msj);
+            valid = true;
+            try {
+                res = scanner.nextBoolean();
+                scanner.nextLine();
+            } catch (InputMismatchException e) {
+                scanner.nextLine();
+                System.out.println("Invalid Entry");
+                valid = false;
+            }
+        } while (!valid);
+
+        return res;
+    }
+
+    /**
+     * Reads a character with a personalized message
+     *
+     * @param msj String with the message
+     * @return Validated character
+     */
+    public static char requestChar(String msj) {
+        char res = ' ';
+        boolean valid;
+
+        do {
+            System.out.print(msj);
+            valid = true;
+            try {
+                res = scanner.nextLine().charAt(0);
+            } catch (InputMismatchException | StringIndexOutOfBoundsException e) {
+                System.out.println("Invalid Entry");
+                valid = false;
+            }
+        } while (!valid);
+
+        return res;
     }
 
 }

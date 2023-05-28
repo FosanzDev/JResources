@@ -8,10 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="Created JMenuGenerator to be able to create a default MenuGenerator">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDateConverter.java" afterDir="false" />
+    <list default="true" id="56ebc418-c948-4d7b-bd81-ad43c4e6c686" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fosanzdev/jresources/JDate.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,10 @@
       <workItem from="1675159537066" duration="1272000" />
       <workItem from="1678435826575" duration="6914000" />
       <workItem from="1682607587497" duration="20000" />
-      <workItem from="1683709926664" duration="992000" />
+      <workItem from="1683709926664" duration="1189000" />
+      <workItem from="1683736505837" duration="3000" />
+      <workItem from="1683753034968" duration="30000" />
+      <workItem from="1683753297226" duration="105000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674821654081</created>
@@ -148,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678442585172</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created JDateConverter to convert different time formats">
+      <created>1683711105619</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683711105619</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +171,7 @@
     <MESSAGE value="improved dateToPattern: now it can work with multiple separators and default separators" />
     <MESSAGE value="changed functionality in dateToPattern&#10;&#10;now dateToPattern is capable of work with separators with more than one character (Strings)." />
     <MESSAGE value="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed DeployMenu&#10;&#10;DeployMenu now gets the footer from the last option and receives a boolean indicating whether if the footer is active or not" />
+    <MESSAGE value="Created JDateConverter to convert different time formats" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

@@ -1,8 +1,6 @@
 package com.fosanzdev.jresources;
 
 public class JString {
-    private static final String vowels = "ÁÀÂÄÉÈËÊÍÌÏÎÓÒÔÖÚÙÜÛ";
-    private static final String normal = "AEIOU";
 
     /**
      * Counts the number of words in a string
@@ -60,7 +58,6 @@ public class JString {
         return phrase.trim().split("\\s+");
     }
 
-
     /**
      * Multiplies a String by n times
      * <p>
@@ -87,7 +84,6 @@ public class JString {
         return sb.toString();
     }
 
-
     /**
      * Removes whitespaces and scape characters of a string
      * 
@@ -95,6 +91,8 @@ public class JString {
      * @return The clean String
      */
     public static String cleanString(String text) {
+        final String vowels = "ÁÀÂÄÉÈËÊÍÌÏÎÓÒÔÖÚÙÜÛ";
+        final String normal = "AEIOU";
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             int idx = vowels.indexOf(text.charAt(i));
@@ -106,7 +104,6 @@ public class JString {
         text = sb.toString();
         return text.trim().replaceAll("\\s+", " ");
     }
-
 
     /**
      * Checks wether a String is palindrome or not (Ignores whitespaces and scape
@@ -139,4 +136,97 @@ public class JString {
 
         return sOriginal.equals(sReversed);
     }
+
+    /**
+     * Reverses a String
+     * <p>
+     * Example:
+     * <blockquote>
+     * 
+     * <pre>
+     * String s = reverseString("hello")
+     * //    s = "olleh"
+     * </pre>
+     * 
+     * </blockquote>
+     * 
+     * @param s String to be reversed
+     * @return String with the reversed String
+     */
+    public static String reverseString(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
+
+    /**
+     * Splits a camel case string into separate words
+     * <p>
+     * Example:
+     * <blockquote>
+     * 
+     * <pre>
+     * String[] words = splitCamelCase("helloWorld");
+     * // words = ["hello", "World"]
+     * </pre>
+     * 
+     * </blockquote>
+     * 
+     * @param s String to be split
+     * @return Array of strings with the split words
+     */
+    public static String[] splitCamelCase(String s) {
+        return s.split("(?<=[a-z])(?=[A-Z])");
+    }
+
+    /**
+     * Capitalizes the first letter of each word in a string
+     * <p>
+     * Example:
+     * <blockquote>
+     * 
+     * <pre>
+     * String s = capitalizeWords("hello world");
+     * // s = "Hello World"
+     * </pre>
+     * 
+     * </blockquote>
+     * 
+     * @param s String to be capitalized
+     * @return String with the capitalized words
+     */
+    public static String capitalizeWords(String s) {
+        String[] words = s.split("\\s+");
+        StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            sb.append(Character.toUpperCase(word.charAt(0)));
+            sb.append(word.substring(1));
+            sb.append(" ");
+        }
+        return sb.toString().trim();
+    }
+
+    /**
+     * Truncates a string to a maximum length
+     * <p>
+     * Example:
+     * <blockquote>
+     * 
+     * <pre>
+     * String s = truncateString("hello world", 5);
+     * // s = "hello"
+     * </pre>
+     * 
+     * </blockquote>
+     * 
+     * @param s         String to be truncated
+     * @param maxLength Maximum length of the truncated string
+     * @return Truncated string
+     */
+    public static String truncateString(String s, int maxLength) {
+        if (s.length() <= maxLength) {
+            return s;
+        } else {
+            return s.substring(0, maxLength);
+        }
+    }
+
 }

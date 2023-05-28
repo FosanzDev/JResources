@@ -1,9 +1,7 @@
 package com.fosanzdev.jresources;
 
 public class JUtils {
-
-    private static final String vowels = "ÁÀÂÄÉÈËÊÍÌÏÎÓÒÔÖÚÙÜÛ";
-
+    
     /**
      * Counts the number of vowels in a string
      *
@@ -11,6 +9,7 @@ public class JUtils {
      * @return Integer with the number of vowels
      */
     public static int countVowels(String s) {
+        final String vowels = "ÁÀÂÄÉÈËÊÍÌÏÎÓÒÔÖÚÙÜÛ";
         // Variable definition
         s = s.toUpperCase();
         int counter = 0;
@@ -61,7 +60,7 @@ public class JUtils {
     }
 
     /**
-     * Returns wether the number is between a range of numbers or not
+     * Returns wether the number is between a range of numbers or not (inclusive)
      * <p>
      * Examples:
      * <blockquote><pre>
@@ -73,8 +72,25 @@ public class JUtils {
      * @param upperBound Max range border
      * @return a boolean with the result
      */
-    public static boolean inRange(double x, double lowerBound, double upperBound){
+    public static boolean inclusiveInRange(double x, double lowerBound, double upperBound){
         return x >= lowerBound && x <= upperBound;
+    }
+
+    /**
+     * Returns wether the number is between a range of numbers or not (exclusive)
+     * <p>
+     * Examples:
+     * <blockquote><pre>
+     * boolean b = inRange(3, 2.5, 4)
+     *      //b = true
+     * </pre></blockquote>
+     * @param x Number to be checked
+     * @param lowerBound Min range border
+     * @param upperBound Max range border
+     * @return a boolean with the result
+     */
+    public static boolean exclusiveInRange(double x, double lowerBound, double upperBound){
+        return x > lowerBound && x < upperBound;
     }
 
 }
