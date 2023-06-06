@@ -1,6 +1,5 @@
 package com.fosanzdev.jresources;
 
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.io.PrintStream;
 import java.text.ParseException;
@@ -279,16 +278,4 @@ public class JRequest {
     public GregorianCalendar requestDate(String msj){
         return requestDate(msj, "dd/MM/yyyy");
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        PrintStream printer = System.out;
-        JRequest request = new JRequest(printer, scanner);
-
-        GregorianCalendar date = request.requestDate("Introduce una fecha: ");
-        printer.println(date.getTime());
-
-
-    }
-
 }
