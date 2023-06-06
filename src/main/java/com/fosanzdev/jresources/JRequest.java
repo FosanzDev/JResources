@@ -1,12 +1,36 @@
 package com.fosanzdev.jresources;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.io.PrintStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JRequest {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+    private PrintStream printer;
 
+    public JRequest(PrintStream printer, Scanner scanner) {
+        this.scanner = scanner;
+        this.printer = printer;
+    }
+
+    public JRequest() {
+        this(System.out, new Scanner(System.in));
+    }
+
+    public JRequest(Scanner scanner) {
+        this(System.out, scanner);
+    }
+
+    public JRequest(PrintStream printer){
+        this(printer, new Scanner(System.in));
+    }
+
+    
     /**
      * Request the user a String with a personalized request message
      * and loops input request in case length of the String given is not between
@@ -29,15 +53,15 @@ public class JRequest {
      * @param maxLon  Integer with the maximum length
      * @return String with the validated input
      */
-    public static String requestString(String message, int minLon, int maxLon) {
+    public String requestString(String message, int minLon, int maxLon) {
         String resultado;
         boolean valido;
         do {
-            System.out.print(message);
+            printer.print(message);
             resultado = scanner.nextLine();
             valido = resultado.length() >= minLon && resultado.length() <= maxLon;
             if (!valido) {
-                System.out.printf("El string debe tener entre %d y %d letras\n", minLon, maxLon);
+                printer.printf("El string debe tener entre %d y %d letras\n", minLon, maxLon);
             }
         } while (!valido);
         return resultado;
@@ -49,8 +73,8 @@ public class JRequest {
      * @param message Message to be printed
      * @return String with the input
      */
-    public static String requestString(String message) {
-        System.out.print(message);
+    public String requestString(String message) {
+        printer.print(message);
         return scanner.nextLine();
     }
 
@@ -60,8 +84,8 @@ public class JRequest {
      * @param msj Personalized request message
      * @return boolean with the user selection
      */
-    public static boolean readOption(String msj) {
-        System.out.print(msj);
+    public boolean readOption(String msj) {
+        printer.print(msj);
         return scanner.nextLine().charAt(0) == 'y';
     }
 
@@ -71,23 +95,24 @@ public class JRequest {
      * @param msj String with the message
      * @return integer with the validated input
      */
-    public static int requestLimitedInt(String msj, int limit) {
+    public int requestLimitedInt(String msj, int limit) {
         int res = 0;
         boolean valid;
 
         do {
-            System.out.print(msj);
+            printer.print(msj);
             valid = true;
             try {
                 res = scanner.nextInt();
                 scanner.nextLine();
-                if (Integer.toString(res).length() != limit) {
-                    System.out.println("Invalid Entry");
+                String resString = Integer.toString(res);
+                if (!resString.matches("\\d{1," + limit + "}")) {
+                    printer.println("Invalid Entry");
                     valid = false;
                 }
             } catch (InputMismatchException e) {
                 scanner.nextLine();
-                System.out.println("Invalid Entry");
+                printer.println("Invalid Entry");
                 valid = false;
             }
         } while (!valid);
@@ -101,19 +126,19 @@ public class JRequest {
      * @param msj String with the message
      * @return Validated integer
      */
-    public static int requestInt(String msj) {
+    public int requestInt(String msj) {
         int res = 0;
         boolean valid;
 
         do {
-            System.out.print(msj);
+            printer.print(msj);
             valid = true;
             try {
                 res = scanner.nextInt();
                 scanner.nextLine();
             } catch (InputMismatchException e) {
                 scanner.nextLine();
-                System.out.println("Invalid Entry");
+                printer.println("Invalid Entry");
                 valid = false;
             }
         } while (!valid);
@@ -129,23 +154,23 @@ public class JRequest {
      * @param max Maximum value
      * @return Validated integer
      */
-    public static int requestInt(String msj, int min, int max) {
-        int res = 0;
+    public int requestInt(String msj, int min, int max) {
+        int res = min - 1;
         boolean valid;
 
         do {
-            System.out.print(msj);
+            printer.print(msj);
             valid = true;
             try {
                 res = scanner.nextInt();
                 scanner.nextLine();
                 if (res < min || res > max) {
-                    System.out.println("Invalid Entry");
+                    printer.println("Invalid Entry");
                     valid = false;
                 }
             } catch (InputMismatchException e) {
                 scanner.nextLine();
-                System.out.println("Invalid Entry");
+                printer.println("Invalid Entry");
                 valid = false;
             }
         } while (!valid);
@@ -159,20 +184,20 @@ public class JRequest {
      * @param msj String to be printed
      * @return Validated double
      */
-    public static double requestDouble(String msj) {
+    public double requestDouble(String msj) {
         boolean valid;
         double d;
         do {
             d = 0;
             valid = true;
-            System.out.print(msj);
+            printer.print(msj);
 
             try {
                 d = scanner.nextDouble();
                 scanner.nextLine();
 
             } catch (InputMismatchException e) {
-                System.out.println("Entrada no valida");
+                printer.println("Entrada no valida");
                 scanner.nextLine();
                 valid = false;
             }
@@ -188,19 +213,19 @@ public class JRequest {
      * @param msj String with the message
      * @return Validated boolean
      */
-    public static boolean requestBoolean(String msj) {
+    public boolean requestBoolean(String msj) {
         boolean res = false;
         boolean valid;
 
         do {
-            System.out.print(msj);
+            printer.print(msj);
             valid = true;
             try {
                 res = scanner.nextBoolean();
                 scanner.nextLine();
             } catch (InputMismatchException e) {
                 scanner.nextLine();
-                System.out.println("Invalid Entry");
+                printer.println("Invalid Entry");
                 valid = false;
             }
         } while (!valid);
@@ -214,22 +239,56 @@ public class JRequest {
      * @param msj String with the message
      * @return Validated character
      */
-    public static char requestChar(String msj) {
+    public char requestChar(String msj) {
         char res = ' ';
         boolean valid;
 
         do {
-            System.out.print(msj);
+            printer.print(msj);
             valid = true;
             try {
                 res = scanner.nextLine().charAt(0);
             } catch (InputMismatchException | StringIndexOutOfBoundsException e) {
-                System.out.println("Invalid Entry");
+                printer.println("Invalid Entry");
                 valid = false;
             }
         } while (!valid);
 
         return res;
+    }
+
+    public GregorianCalendar requestDate(String msj, String format){
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        sdf.setLenient(false);
+        GregorianCalendar date = new GregorianCalendar();
+        boolean valid;
+        do {
+            printer.print(msj);
+            valid = true;
+            try {
+                date.setTime(sdf.parse(scanner.next()));
+            } catch (ParseException e) {
+                printer.println("Invalid Entry");
+                valid = false;
+            }
+        } while (!valid);
+
+        return date;
+    }
+
+    public GregorianCalendar requestDate(String msj){
+        return requestDate(msj, "dd/MM/yyyy");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        PrintStream printer = System.out;
+        JRequest request = new JRequest(printer, scanner);
+
+        GregorianCalendar date = request.requestDate("Introduce una fecha: ");
+        printer.println(date.getTime());
+
+
     }
 
 }
