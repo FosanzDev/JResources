@@ -272,6 +272,7 @@ public class JRequest {
             }
         } while (!valid);
 
+        scanner.nextLine();
         return date;
     }
 
